@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'BS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'youtubetrail',
+        'NAME': 'bsdb',
         'USER': 'postgres',
-        'PASSWORD': 'katti403',
+        'PASSWORD': 'anshuman75',
         'HOST': 'localhost'
     }
 }
@@ -146,8 +146,8 @@ MESSAGE_TAGS = {
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'cristomathew7@gmail.com'
-EMAIL_HOST_PASSWORD = 'xmzvvcjeyrvpicwx'
+EMAIL_HOST_USER = 'collegebuyandsell@gmail.com'
+EMAIL_HOST_PASSWORD = '##cannotbeuploadedtogithub##'
 EMAIL_USE_TLS = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
