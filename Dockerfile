@@ -1,15 +1,14 @@
+# Use the official Python image as the base image
+FROM python:3.8
 
-FROM python:3.9-slim
-# Using the python:3.9-slim base image
+# Set the working directory in the container
+WORKDIR /app
 
-COPY requirements.txt .
-# Copying the requirements.txt file from the current directory into the container
+# Copy the application files into the working directory
+COPY . /app
 
+# Install the application dependencies
 RUN pip install -r requirements.txt
-# Installing the dependencies specified in requirements.txt
 
-COPY . .
-# Copying the entire current directory into the container
-
-EXPOSE 8000
+# Define the entry point for the container
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
