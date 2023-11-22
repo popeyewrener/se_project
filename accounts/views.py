@@ -54,7 +54,7 @@ def register(request):
                         send_mail(
                             'Account Creation Confirmation',
                             'Hi '+ first_name + ' You Confirmation code is: ' +code,
-                            'anshuman.kalra75@gmail.com',
+                            'collegebuysellgoods@gmail.com',
                             [email],
                             fail_silently=False
                         )
@@ -147,6 +147,10 @@ def myinquiries(request):
 @login_required
 def inquiry1(request):
     myinquiry = inquiry.objects.all().filter(owner_id=request.user.id)
+    # print(myinquiry[1].message)
+    # print(myinquiry[1].contact_date);
+    # print(myinquiry[1].user_id);
+    # print(myinquiry[1].listing);
     context = {
         'inquiries': myinquiry
     }
@@ -161,7 +165,7 @@ def send_reply(request):
         send_mail(
             'Reply from ' + lisiting + ' owner',
             message,
-            'cristomathew7@gmail.com',
+            'collegebuysellgoods@gmail.com',
             [email],
             fail_silently=False
         )

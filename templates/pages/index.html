@@ -7,30 +7,40 @@
       <div class="home-search p-5">
         <div class="overlay p-5">
           {% include 'partials/_alerts.html' %}
-          <h1 class="display-4 mb-4">
+          <h1 class="display-4 mb-4">Welcome</h1>
+          <h2 class="display-4 mb-4">
             Buy and Sell Items Online
-          </h1>
-          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quas, asperiores eveniet vel nostrum magnam
-            voluptatum tempore! Consectetur, id commodi!</p>
+          </h2>
+          <p class="lead">Kindly enter the details of the product needed to be searched.</p>
           <div class="search">
             <form action="{% url 'search' %}">
               <!-- Form Row 1 -->
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label class="sr-only">Search</label>
-                  <input type="text" name="keywords" class="form-control" placeholder="Search (Electronics, Gadgets, books)">
+                  <input type="text" name="keywords" class="form-control" placeholder="Search (Electronic items, Books, Daily Accessories)">
                 </div>
   
                 <div class="col-md-4 mb-3">
-                  <label class="sr-only">City</label>
-                  <input type="text" name="city" class="form-control" placeholder="City">
-                </div>
-  
-                <div class="col-md-4 mb-3">
-                  <label class="sr-only">State</label>
+                  <label class="sr-only">Semester</label>
                   <select name="state" class="form-control">
-                    <option selected="true" disabled="disabled">State (All)</option>
-                      {% for key,value in state_choices.items %}
+                    <option selected="true" disabled="disabled">Semester</option>
+                      {% for key,value in semester_choices.items %}
+                      <option value="{{key}}"
+                      {% if key == values. %}
+                      selected
+                      {% endif %}
+                      >{{value}}</option>
+                      {%endfor%}
+  
+                  </select>
+                </div>
+  
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Hostel</label>
+                  <select name="state" class="form-control">
+                    <option selected="true" disabled="disabled">Hostel (All)</option>
+                      {% for key,value in hostel_choices.items %}
                       <option value="{{key}}"
                       {% if key == values.state %}
                       selected
@@ -149,23 +159,20 @@
         <div class="col-md-4">
           <i class="fas fa-comment fa-4x mr-4"></i>
           <hr>
-          <h3>Consulting Services</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Buy needed goods</h3>
+          <p>Buy the goods needed for your College LIfe , whether be it Books , Stationary or Accessories , either for room or in general, browse through the listings to find the product desired.</p>
         </div>
         <div class="col-md-4">
           <i class="fas fa-home fa-4x mr-4"></i>
           <hr>
-          <h3>Propery Management</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Negotiate with the seller</h3>
+          <p>Our website provides the feature to negotiate with the seller for the goods interested, both on the website itself , and through mail.</p>
         </div>
         <div class="col-md-4">
           <i class="fas fa-suitcase fa-4x mr-4"></i>
           <hr>
-          <h3>Renting & Selling</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-            hic dignissimos ratione ea quae.</p>
+          <h3>Sell after use</h3>
+          <p>Use the website again to list the goods to sell after you have used it for another buyer like you to have the advantage of easy point to check for needs.</p>
         </div>
       </div>
     </div>

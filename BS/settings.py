@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'listings',
     'accounts',
     'inquiry',
-    'crispy_forms'
+    'crispy_forms',
+    'crispy_bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -146,8 +147,8 @@ MESSAGE_TAGS = {
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'collegebuyandsell@gmail.com'
-EMAIL_HOST_PASSWORD = '##cannot_be_uploaded_to_git_hub##'
+EMAIL_HOST_USER = 'collegebuysellgoods@gmail.com'
+EMAIL_HOST_PASSWORD = 'czkb fdll huzp jnzb'
 EMAIL_USE_TLS = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

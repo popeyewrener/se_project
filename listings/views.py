@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Listing
 from django.core.paginator import Paginator, EmptyPage
-from .choices import price_choices, category_choices, state_choices
+from .choices import price_choices, category_choices, hostel_choices,semester_choices
 from django.contrib.auth.decorators import login_required
 from .forms import ListingForm, UpdateForm
 def listings(request):
@@ -94,7 +94,7 @@ def search(request):
     context = {
         'query_set': query_set,
         'price_choices': price_choices,
-        'state_choices': state_choices,
+        'state_choices': hostel_choices,
         'category_choices': category_choices,
         'values': request.GET
     }

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from listings.choices import price_choices, category_choices, state_choices
+from listings.choices import price_choices, category_choices, hostel_choices,semester_choices
 from listings.models import Listing
 
 # Create your views here.
@@ -9,8 +9,9 @@ def index(request):
     context = {
         'listings': listings,
         'price_choices': price_choices,
-        'state_choices': state_choices,
+        'hostel_choices': hostel_choices,
         'category_choices': category_choices,
+        'semester_choices': semester_choices,
     }
     return render(request, 'pages/index.html', context)
 

@@ -1,16 +1,15 @@
 from django.db import models
 from datetime import datetime
 from Core.models import User
-from .modelchoices import category_choices, state_choices
+from .modelchoices import category_choices, hostel_choices,semester_choices
 # Create your models here.
 class Listing(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    category = models.CharField(max_length=100, choices=category_choices)
-    address = models.CharField(max_length=100)
-    city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100, choices=state_choices)
-    zipcode = models.CharField(max_length=20)
+    category = models.CharField(default='Books',max_length=100, choices=category_choices,null=True)
+    room = models.IntegerField()
+    semester = models.CharField(default='BTech 1st',max_length=100,choices=semester_choices,null=True)
+    hostel = models.CharField(default='Kurukshetra Hostel',max_length=100,choices=hostel_choices,null=True)
     description = models.TextField(blank=True)
     price = models.IntegerField()
     total_rating = models.IntegerField(null=True)
